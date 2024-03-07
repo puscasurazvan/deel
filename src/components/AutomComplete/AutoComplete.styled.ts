@@ -4,6 +4,14 @@ export const Wrapper = styled.div({
   display: "flex",
   flexDirection: "column",
 });
+export const InputWrapper = styled.div({
+  display: "flex",
+  flexDirection: "row",
+  placeItems: "center",
+  ">:last-child": {
+    marginLeft: "5px",
+  },
+});
 
 export const Input = styled.input({
   border: "none",
@@ -14,5 +22,11 @@ export const Input = styled.input({
 
 export const List = styled.ul({
   listStyle: "none",
-  padding: 0,
+  padding: "0 20px",
+  marginTop: "10px",
+  borderRadius: "5px",
+  maxHeight: "500px",
+  overflowX: "hidden",
+  border: "none",
+  boxShadow: "0px 0px 2px 2px #DCDCDC",
 });

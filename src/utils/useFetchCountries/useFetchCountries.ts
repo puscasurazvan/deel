@@ -6,7 +6,7 @@ interface Country {
 
 import { mockedCountries } from "./mockedCountries";
 
-export const useCountries = () => {
+export const useFetchCountries = () => {
   const [countries, setCountries] = useState<Country[]>([]);
   const [loading, setLoading] = useState(true);
 

@@ -55,10 +55,11 @@ export const Autocomplete: React.FC = () => {
     setFilteredCountries([]);
   };
 
-  // Selects a country when enter is pressed
+  // Selects a country when enter or tab are pressed based on a single filtered result
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (filteredCountries.length !== 1) return;
-    if (event.key === "Enter") {
+    if (event.key === "Enter" || event.key === "Tab") {
+      event.preventDefault();
       handleCountryClick(filteredCountries[0]);
     }
   };
@@ -74,7 +75,7 @@ export const Autocomplete: React.FC = () => {
           onChange={handleInputChange}
           onKeyDown={handleKeyDown}
         />
-        {selectedCountry && <span>✔️</span>}
+        {selectedCountry && <Styled.IconSpan>✔️</Styled.IconSpan>}
       </Styled.InputWrapper>
       {!filteredCountries.length &&
         searchTerm.length >= 2 &&

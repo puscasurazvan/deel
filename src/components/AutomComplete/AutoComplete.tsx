@@ -40,6 +40,8 @@ export const Autocomplete: React.FC = () => {
   }, [filterCountries]);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const includesNumericCharacters = /\d/.test(event.target.value);
+    if (includesNumericCharacters) return;
     setSearchTerm(event.target.value);
     if (event.target.value !== searchTerm) {
       setSelectedCountry("");
@@ -65,6 +67,7 @@ export const Autocomplete: React.FC = () => {
     <Styled.Wrapper>
       <Styled.InputWrapper>
         <Styled.Input
+          aria-label="Search"
           type="text"
           placeholder="Search for a country..."
           value={searchTerm}

@@ -8,8 +8,8 @@ export const InputWrapper = styled.div({
   display: "flex",
   flexDirection: "row",
   placeItems: "center",
-  ">:last-child": {
-    marginLeft: "5px",
+  ">:first-child": {
+    marginRight: "5px",
   },
 });
 

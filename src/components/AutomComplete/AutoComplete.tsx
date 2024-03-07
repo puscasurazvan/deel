@@ -60,8 +60,6 @@ export const Autocomplete: React.FC = () => {
     }
   };
 
-  console.log("filteredCountries", filteredCountries);
-
   return (
     <Styled.Wrapper>
       {selectedCountry && <h3>Selected Country: {selectedCountry}</h3>}

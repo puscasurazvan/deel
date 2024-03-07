@@ -6,6 +6,7 @@
 
 - React 18
 - Styled Components
+- Custom Hooks, useMemo, useCallback
 - UI deployment: [UI](https://deel-puscasurazvan1.vercel.app)
 
 ## ✅ Things to do:
